@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import NewsItem from './NewsItem';
 
+// Fetchning the article from the api and storing it in useEffect hook than showing the individual articles one by one using NewsItem.
+
 const NewsList = ({ category }) => {
   const [articles, setArticles] = useState([]);
 
@@ -11,7 +13,7 @@ const NewsList = ({ category }) => {
         const { data } = await axios.get(`https://newsapi.org/v2/top-headlines`, {
           params: {
             category,
-            apiKey: 'YOUR_API_KEY',
+            apiKey: Process.env.NewsKey,
           },
         });
         setArticles(data.articles);

@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react';
 
+
+// Used to show the articles one by one using and bookmarking is stored in local storage so that it can be recovered whenever bookmarks are required.
+
 const NewsItem = ({ article }) => {
   const [bookmarked, setBookmarked] = useState(false);
 

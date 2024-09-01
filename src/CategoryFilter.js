@@ -1,6 +1,8 @@
 import React from 'react';
 
-const CategoryFilter = ({ setCategory }) => {
+// This will help to show the articles like the categories described in the array that is a category feature
+
+const CategoryFilter = ({ setCategory}) => {
   const categories = ['health', 'science', 'technology', 'sports'];
 
   return (
